@@ -1,13 +1,14 @@
 
-let grigliaElementi = document.querySelector("#griglia")
+let grigliaElementi = document.querySelector("#block")
 
 for(let i=1;i<=100;i++){
     
     const Element = document.createElement("div")
+
      
-     /*Element.innerHTML=i;
       Element.className="square";
-     Element.style.color="red";*/
+     Element.style.color="black";
+     Element.style.fontSize="20px";
 
      
 
@@ -16,13 +17,16 @@ for(let i=1;i<=100;i++){
     if(i % 3 == 0 && !(i % 5 == 0)){
         console.log("fizz",i)
         Element.innerHTML="Fizz"
+        Element.className=" fizzSquare"
      }else if(i % 5 == 0 && !(i % 3 == 0)){
         console.log("buzz",i)
         Element.innerHTML="Buzz"
+        Element.className=" buzzSquare"
 
      } else if(i % 3 == 0 && i % 5 == 0){
         console.log("fizzbuz",i)
         Element.innerHTML="FizzBuzz"
+        Element.className=" fizzBuzzSquare"
      } else{
         console.log(i)
         Element.innerHTML=i
@@ -30,19 +34,6 @@ for(let i=1;i<=100;i++){
 
 
      grigliaElementi.append(Element)
-
-    /*
-    if(i % 3 == 0 && !(i % 5 == 0)){
-        console.log("fizz",i)
-     }else if(i % 5 == 0 && !(i % 3 == 0)){
-        console.log("buzz",i)
-
-     } else if(i % 3 == 0 && i % 5 == 0){
-        console.log("fizzbuz",i)
-     } else{
-        console.log(i)
-     }*/
-
-         
+      
 }
 
